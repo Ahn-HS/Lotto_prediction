@@ -1,0 +1,36 @@
+﻿<Window x:Class="FilterCom.views.PConfirmFile3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FilterCom.views"
+        mc:Ignorable="d"
+        Title="파일그룹표검증(현재회차)" Height="250" Width="500"  KeyUp="Window_KeyUp">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="10">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="※ 체크된 그룹그룹 개수 : " />
+                <Label Name="lbl_group_cnt" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="▣ 조건(최소,최대개수)에 적중한 파일 그룹개수 : " />
+                <Label Name="lbl_cnt1"  Foreground="Blue"  FontWeight="Bold" />
+                <Label Content="(" />
+                <Label Name="lbl_per1" />
+                <Label Content="%"  />
+                <Label Content=")" />
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="▣ 조건(최소,최대개수)에 실패한 파일 그룹개수 : " />
+                <Label Name="lbl_cnt2" Foreground="Red" FontWeight="Bold" />
+                <Label Content="(" />
+                <Label Name="lbl_per2"   />
+                <Label Content="%" />
+                <Label Content=")" />
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,30 @@
+﻿<Window x:Class="FilterCom.views.PConfirmFile2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:FilterCom.views"
+        mc:Ignorable="d"
+        Title="그룹개수검증(전체회차)" Height="450" Width="800" KeyUp="Window_KeyUp">
+    <Grid>
+        <telerik:RadGridView Name="grid_check" Grid.Row="0"
+                    ShowGroupPanel="False" 
+					AutoGenerateColumns="False"
+					CanUserFreezeColumns="False"
+                    IsFilteringAllowed="False"
+                    CanUserSortColumns="False"
+                    IsReadOnly="True"
+         >
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn Header="회차" HeaderTextAlignment="Center" DataMemberBinding="{Binding title}" Width="150" IsReadOnly="True" TextAlignment="Center" />
+                <telerik:GridViewDataColumn Header="전체 그룹개수" HeaderTextAlignment="Center" DataMemberBinding="{Binding total_file}" Width="150" IsReadOnly="True" TextAlignment="Center" />
+                <telerik:GridViewDataColumn Header="적중한 그룹개수" HeaderTextAlignment="Center" DataMemberBinding="{Binding check_cnt}" Width="150" IsReadOnly="True" TextAlignment="Center" />
+                <telerik:GridViewDataColumn Header="실패한 그룹개수" HeaderTextAlignment="Center" DataMemberBinding="{Binding none_check_cnt}" Width="150" IsReadOnly="True" TextAlignment="Center" />
+                <telerik:GridViewDataColumn Header="적중률(%)" HeaderTextAlignment="Center" DataMemberBinding="{Binding check_per}" 
+                                            DataFormatString="{} {0}%"
+                                            Width="150" IsReadOnly="True" TextAlignment="Center" />
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+    </Grid>
+</Window>

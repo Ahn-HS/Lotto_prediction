@@ -1,0 +1,52 @@
+﻿<Window x:Class="FilterCom.views.PFilterCheck"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FilterCom.views"
+        mc:Ignorable="d"
+        Title="파일그룹표" Height="250" Width="500" KeyUp="Window_KeyUp">
+    <Grid>
+        <StackPanel Name="isView1" Orientation="Vertical" Margin="10">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="※ 체크된 파일그룹표 개수 : " />
+                <Label Name="lbl_group_cnt" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="▣ 조건(최소,최대개수)에 적중한 그룹표 개수 : " />
+                <Label Name="lbl_cnt1" Foreground="Blue"  FontWeight="Bold"/>
+                <Label Content="(" />
+                <Label Name="lbl_per1" />
+                <Label Content="%" />
+                <Label Content=")" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" >
+                <Label Content="-파일그룹표( " />
+                <Label Name="lbl_file1" Foreground="Blue"  />
+                <Label Content=")" />
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="▣ 조건(최소,최대개수)에 실패한 그룹표 개수 : " />
+                <Label Name="lbl_cnt2" Foreground="Red" FontWeight="Bold" />
+                <Label Content="(" />
+                <Label Name="lbl_per2"  />
+                <Label Content="%" />
+                <Label Content=")" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" >
+                <Label Content="-파일그룹표( " />
+                <Label Name="lbl_file2" Foreground="Red" />
+                <Label Content=")" />
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel Name="isView2" Orientation="Vertical" Margin="10" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="검증할 파일그룹표 1개 이상 체크하세요!" />
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</Window>
